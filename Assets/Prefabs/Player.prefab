@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d74239bc56eaa3438ac801a10d29bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 5590721647455606148, guid: 0c2741671060a20459b6b57540c3ab9b, type: 3}
+  dialogueUI: {fileID: 365670785689865745, guid: 3cfcfef16f8fd814e8482afe23c0e773, type: 3}
   playerRb: {fileID: 2146913410670480429}
   animator: {fileID: 2146913410670480438}
   groundLayer:
@@ -158,8 +158,8 @@ MonoBehaviour:
   animator: {fileID: 2146913410670480438}
   attackPoint: {fileID: 2146913410545201520}
   blockPoint: {fileID: 2146913411379769532}
-  healthBar: {fileID: 6081840664809932325, guid: d3efd340077b3204fa814f187056ac19, type: 3}
-  canvas: {fileID: 1133518023508259839, guid: af37eda752707fa478979cf0ba0051e0, type: 3}
+  healthBar: {fileID: 7742226272680556960, guid: d3efd340077b3204fa814f187056ac19, type: 3}
+  canvas: {fileID: 6001068670545689315, guid: af37eda752707fa478979cf0ba0051e0, type: 3}
   boxCollider2D: {fileID: 2146913410670480434}
   enemyLayers:
     serializedVersion: 2
