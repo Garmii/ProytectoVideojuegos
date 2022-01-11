@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Turn
+  - Slime
+  - Coin
+  - Ground
+  - Cannon
+  - Bullet
+  - Water
+  - Sign
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Sign
+  - Player
+  - Ground
+  - Slime
+  - Background
+  - Foreground
+  - Turn walls
+  - Agro
+  - Alert
+  - Coin
+  - Bullet
+  - Cannon
+  - Water
+  - Particles
+  - Health
+  - Stamine
+  - Coins
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2013043717
+    locked: 0
+  - name: Water
+    uniqueID: 1015452973
+    locked: 0
+  - name: TIles
+    uniqueID: 3046753989
+    locked: 0
+  - name: Foreground
+    uniqueID: 287072025
+    locked: 0
+  - name: Coin
+    uniqueID: 3858599249
+    locked: 0
+  - name: Character
+    uniqueID: 3415557951
+    locked: 0
+  - name: Particles
+    uniqueID: 1320390277
+    locked: 0
+  - name: Dialogue
+    uniqueID: 1393861543
+    locked: 0
+  - name: Health
+    uniqueID: 2340700691
+    locked: 0
+  - name: Stamine
+    uniqueID: 3282022029
+    locked: 0
+  - name: Coins
+    uniqueID: 989790235
+    locked: 0
