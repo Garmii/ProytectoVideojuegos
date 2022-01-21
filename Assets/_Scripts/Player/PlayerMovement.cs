@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private DialogueUI dialogueUI;
@@ -66,8 +66,6 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetBool("isRunning", horizontal != 0.0f);//Parar o ejecutar animacion de correr
 
-
-
         if (Input.GetButtonDown("Jump") && IsGrounded())//Si aprieto saltar y tengo saltos restantes
         {
             Jump();
@@ -122,3 +120,4 @@ public class PlayerMovement : MonoBehaviour
     }
 
 }
+*/

@@ -15,7 +15,7 @@ public class SlimeCombat : MonoBehaviour
     public HealthBar healthBar;
     public Canvas canvas;
 
-    public PlayerCombat playerCombat;
+    public Player playerCombat;
     public LayerMask groundLayer;
 
     private bool dead = false;

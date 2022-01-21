@@ -177,4 +177,4 @@ MonoBehaviour:
   Bullet: {fileID: 8289975835382317465, guid: eb340a286d1e4b14f8fc3ed0faa79383, type: 3}
   firePoint: {fileID: 4454425963628225832}
   animator: {fileID: 4454425964335188732}
-  player: {fileID: 2146913410670480433, guid: 454852aac0dd6c74c8200ab325a4348a, type: 3}
+  player: {fileID: 1237934269119426995, guid: 454852aac0dd6c74c8200ab325a4348a, type: 3}
