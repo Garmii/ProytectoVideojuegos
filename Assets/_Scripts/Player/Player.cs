@@ -16,19 +16,19 @@ public class Player : MonoBehaviour
         public LayerMask enemyLayers;
         public LayerMask groundLayer;
 
-        [SerializeField] public int maxHealth;
-        [SerializeField] public int currentHealth;
+        [SerializeField] private int maxHealth;
+        [SerializeField] private int currentHealth;
         
-        [SerializeField] public float attackRange;
-        [SerializeField] public float blockRange;
-        [SerializeField] public int attackDamage;
-        [SerializeField] public float attackRate;
-        [SerializeField] public float knockback;
+        [SerializeField] private float attackRange;
+        [SerializeField] private float blockRange;
+        [SerializeField] private int attackDamage;
+        [SerializeField] private float attackRate;
+        [SerializeField] private float knockback;
         
-        [SerializeField] public float speed;
-        [SerializeField] public float jumpForce;
-        [SerializeField] public int maxJumps;
-        [SerializeField] public int remainingJumps;
+        [SerializeField] private float speed;
+        [SerializeField] private float jumpForce;
+        [SerializeField] private int maxJumps;
+        [SerializeField] private int remainingJumps;
 
         
         [SerializeField] private DialogueUI dialogueUI;
@@ -47,8 +47,10 @@ public class Player : MonoBehaviour
             boxCollider2D = GetComponent<BoxCollider2D>();
             animator = GetComponent<Animator>();
             rb = GetComponent<Rigidbody2D>();
+            
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(currentHealth);
+            
             remainingJumps = maxJumps;
         }
 
@@ -172,12 +174,12 @@ public class Player : MonoBehaviour
 
                 int direction = transform.position.x < enemy.GetComponent<Transform>().position.x ? 1 : -1;
             
-                SlimeCombat slimeCombat = enemy.GetComponent<SlimeCombat>();
+                Slime slime = enemy.GetComponent<Slime>();
                 Bullet bullet = enemy.GetComponent<Bullet>();
             
-                if(slimeCombat != null)
+                if(slime != null)
                 {
-                    slimeCombat.Knock(direction, 2);
+                    slime.Knock(direction, 2);
                 }
             
                 if(bullet != null)
@@ -203,7 +205,7 @@ public class Player : MonoBehaviour
         {
             dead = true;
             animator.SetBool("isDead", true);
-            this.enabled = false;
+            //this.enabled = false;
         }
         
         private void Attack()//Ataca
@@ -215,11 +217,11 @@ public class Player : MonoBehaviour
 
             foreach(Collider2D enemy in hitEnemies)
             {
-                SlimeCombat slimeCombat = enemy.GetComponent<SlimeCombat>();
+                Slime slime = enemy.GetComponent<Slime>();
                 Bullet bullet = enemy.GetComponent<Bullet>();
-                if (slimeCombat != null)
+                if (slime != null)
                 {
-                    slimeCombat.TakeDamage(attackDamage, knockback, this.transform);
+                    slime.TakeDamage(attackDamage, knockback, this.transform);
                 }
                 if (bullet != null)
                 {

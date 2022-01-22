@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9042165053382225294}
   - component: {fileID: 9042165053382225293}
-  - component: {fileID: 9042165053382225289}
-  - component: {fileID: 9042165053382225290}
   - component: {fileID: 9042165053382225292}
   - component: {fileID: 9042165053382225288}
   - component: {fileID: 9042165053382225295}
+  - component: {fileID: 2279448817997542978}
   m_Layer: 9
   m_Name: Slime
   m_TagString: Slime
@@ -88,53 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9042165053382225289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9042165053382225283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 945a7ec3d0605a34cbc0915255daeb44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  MoveRight: 1
-  moving: 0
-  agroSpeed: 2
-  jumpPower: 3
-  rb: {fileID: 9042165053382225288}
-  player: {fileID: 1237934269119426990, guid: 454852aac0dd6c74c8200ab325a4348a, type: 3}
-  animator: {fileID: 9042165053382225292}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
---- !u!114 &9042165053382225290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9042165053382225283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc958b59c111f7499c1bb75f027edd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  attackDamage: 20
-  knockback: 5
-  animator: {fileID: 9042165053382225292}
-  rb: {fileID: 9042165053382225288}
-  healthBar: {fileID: 1245953997984533776, guid: d3efd340077b3204fa814f187056ac19, type: 3}
-  canvas: {fileID: 8575631458879813364, guid: af37eda752707fa478979cf0ba0051e0, type: 3}
-  playerCombat: {fileID: 1237934269119426997, guid: 454852aac0dd6c74c8200ab325a4348a, type: 3}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!95 &9042165053382225292
 Animator:
   serializedVersion: 3
@@ -201,3 +153,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.99304986, y: 0.7048223}
   m_EdgeRadius: 0
+--- !u!114 &2279448817997542978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9042165053382225283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349e717cb6557ae4e936f8b33e5acce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 9042165053382225292}
+  rb: {fileID: 9042165053382225288}
+  healthBar: {fileID: 0}
+  canvas: {fileID: 0}
+  maxHealth: 60
+  currentHealth: 0
+  attackDamage: 20
+  knockback: 5
+  speed: 1
+  MoveRight: 1
+  moving: 1
+  agroSpeed: 2
+  jumpPower: 2
+  player: {fileID: 1237934269119426990, guid: 454852aac0dd6c74c8200ab325a4348a, type: 3}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256

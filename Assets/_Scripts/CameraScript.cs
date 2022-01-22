@@ -14,6 +14,6 @@ public class CameraScript : MonoBehaviour
 
     private void Update()
     {
-        transform.position = new Vector3(prefabManager.spawnedPlayer.transform.position.x, prefabManager.spawnedPlayer.transform.position.y, transform.position.z);
+        transform.position = new Vector3(prefabManager.spawnedPlayer.transform.position.x+4, prefabManager.spawnedPlayer.transform.position.y+2, transform.position.z);
     }
 }
