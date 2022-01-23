@@ -201,8 +201,8 @@ MonoBehaviour:
   animator: {fileID: 1237934269119426996}
   attackPoint: {fileID: 1237934269817261298}
   blockPoint: {fileID: 1237934268756004158}
-  healthBar: {fileID: 1245953997984533776, guid: d3efd340077b3204fa814f187056ac19, type: 3}
-  canvas: {fileID: 8575631458879813364, guid: af37eda752707fa478979cf0ba0051e0, type: 3}
+  healthBar: {fileID: 1801252591495074843, guid: d3efd340077b3204fa814f187056ac19, type: 3}
+  canvas: {fileID: 5718802602000826668, guid: 04e215a0026128e42938e521418fbd3a, type: 3}
   boxCollider2D: {fileID: 1237934269119426992}
   enemyLayers:
     serializedVersion: 2
@@ -218,7 +218,7 @@ MonoBehaviour:
   attackRate: 2
   knockback: 15
   speed: 5
-  jumpForce: 15
+  jumpForce: 13
   maxJumps: 1
   remainingJumps: 0
   dialogueUI: {fileID: 7425352720766909368, guid: 3cfcfef16f8fd814e8482afe23c0e773, type: 3}

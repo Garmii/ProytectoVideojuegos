@@ -8,10 +8,12 @@ public class PrefabManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject slime;
     [SerializeField] private GameObject cannon;
+
+    
     public GameObject spawnedPlayer;
     public GameObject spawnedSlime;
     public GameObject spawnedCannon;
-    
+
     private List<GameObject> cannons = new List<GameObject>();
     private List<GameObject> slimes = new List<GameObject>();
 
@@ -19,7 +21,7 @@ public class PrefabManager : MonoBehaviour
     void Start()
     {
        spawnedPlayer = Instantiate(player);
-       
+
        for (int i =0;i<5;i++)
        {
            cannons.Add(Instantiate(cannon));

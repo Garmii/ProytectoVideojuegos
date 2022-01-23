@@ -3,17 +3,22 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    [SerializeField] private PrefabManager prefabManager;
-
+    [SerializeField] private GameObject player;
+    private GameObject spawnedPlayer;
     
 
     private void Start()
-    { 
-        
+    {
+       
     }
 
     private void Update()
     {
-        transform.position = new Vector3(prefabManager.spawnedPlayer.transform.position.x+4, prefabManager.spawnedPlayer.transform.position.y+2, transform.position.z);
+        if (spawnedPlayer != null)
+        {
+            spawnedPlayer = FindObjectOfType<Player>().gameObject;
+            transform.position = new Vector3(spawnedPlayer.transform.position.x + 4,
+                spawnedPlayer.transform.position.y + 2, transform.position.z);
+        }
     }
 }

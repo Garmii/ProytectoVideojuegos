@@ -51,6 +51,8 @@ public class Player : MonoBehaviour
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(currentHealth);
             
+            
+            
             remainingJumps = maxJumps;
         }
 

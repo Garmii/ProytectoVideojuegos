@@ -169,10 +169,10 @@ MonoBehaviour:
   rb: {fileID: 9042165053382225288}
   healthBar: {fileID: 0}
   canvas: {fileID: 0}
-  maxHealth: 60
+  maxHealth: 100
   currentHealth: 0
   attackDamage: 20
-  knockback: 5
+  knockback: 10
   speed: 1
   MoveRight: 1
   moving: 1
