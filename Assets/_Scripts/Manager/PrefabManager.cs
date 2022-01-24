@@ -20,17 +20,18 @@ public class PrefabManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       spawnedPlayer = Instantiate(player);
+        //spawnedPlayer = Instantiate(player);
 
-       for (int i =0;i<5;i++)
-       {
-           cannons.Add(Instantiate(cannon));
-           slimes.Add(Instantiate(slime));
-       }
-       
-       slimes[0].transform.position = new Vector2(5,3);
-       slimes[3].transform.position = new Vector2(5,5);
-       cannons[0].transform.position = new Vector2(23.5f, 2.5f);
+        /*for (int i =0;i<5;i++)
+        {
+            cannons.Add(Instantiate(cannon));
+            slimes.Add(Instantiate(slime));
+        }
+        
+        slimes[0].transform.position = new Vector2(5,3);
+        slimes[3].transform.position = new Vector2(5,5);
+        cannons[0].transform.position = new Vector2(23.5f, 2.5f);
+     */
     }
 
     // Update is called once per frame

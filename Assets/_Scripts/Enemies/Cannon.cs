@@ -23,6 +23,9 @@ public class Cannon : MonoBehaviour
 
     private void Update()
     {
+        
+        if (spawnedPlayer == null) return;
+        
         float distance = transform.position.x - spawnedPlayer.transform.position.x;
 
         if (canShoot == true && (distance < 10 && distance > 0))

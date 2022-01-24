@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 public class Player : MonoBehaviour
     {
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
         [SerializeField] private DialogueUI dialogueUI;
         public DialogueUI DialogueUI => dialogueUI;
         public IInteractable Interactable { get; set; }
+        
 
         
         private float horizontal;
@@ -153,12 +155,12 @@ public class Player : MonoBehaviour
 
         private void OnCollisionStay2D(Collision2D other)
         {
-            if(other.collider.CompareTag("Ground") && dead)
+            /*if(other.collider.CompareTag("Ground"))
             {
                 rb.velocity = new Vector2(0, 0);
                 rb.isKinematic = true;
                 GetComponent<BoxCollider2D>().enabled = false;
-            }
+            }*/
         }
         
         //Metodos propios
@@ -205,9 +207,10 @@ public class Player : MonoBehaviour
         
         private void Die()//Muere
         {
-            dead = true;
+
             animator.SetBool("isDead", true);
-            //this.enabled = false;
+            Destroy(gameObject);
+            LevelManager.instance.Respawn();
         }
         
         private void Attack()//Ataca

@@ -61,7 +61,7 @@ public class Slime : MonoBehaviour
     
     private void FixedUpdate()
     {
-
+        if (spawnedPlayer == null) return;
         direction = this.transform.position.x < spawnedPlayer.transform.position.x ? 1 : -1;
 
         float distance = Mathf.Abs(spawnedPlayer.transform.position.x - transform.position.x);
