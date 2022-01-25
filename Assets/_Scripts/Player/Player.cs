@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
         private bool block;
         private float nextAttackTime = 0f;
         private bool dead = false;
+        private bool isGrounded;
 
 
         private void Start()
@@ -53,14 +54,12 @@ public class Player : MonoBehaviour
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(currentHealth);
             
-            
-            
             remainingJumps = maxJumps;
         }
 
         private void Update()
         {
-            if (Time.time >= nextAttackTime)//Tiempo de enfriamiento para volver a atacar
+            if (Time.time >= nextAttackTime) //Tiempo de enfriamiento para volver a atacar
             {
                 if (Input.GetButtonDown("Fire1"))
                 {
@@ -68,8 +67,8 @@ public class Player : MonoBehaviour
                     nextAttackTime = Time.time + 1f / attackRate;
                 }
             }
-        
-            if (Input.GetButton("Fire2") && IsGrounded())
+
+            if (Input.GetButton("Fire2") && isGrounded)
             {
                 Block();
             }
@@ -77,12 +76,12 @@ public class Player : MonoBehaviour
             {
                 block = false;
             }
-            
-            //---------------------------------------------------------------------------------------------------------------//
 
-            if(horizontal > 0.0f)//Derecha
+//---------------------------------------------------------------------------------------------------------------//
+
+            if (horizontal > 0.0f) //Derecha
             {
-                transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);//Rota el personaje
+                transform.localScale = new Vector3(1.0f, 1.0f, 1.0f); //Rota el personaje
             }
             else if (horizontal < 0.0f) //Izquierda
             {
@@ -95,75 +94,132 @@ public class Player : MonoBehaviour
                 animator.SetBool("isFalling", false);
             }
 
-            if(rb.velocity.y < 0)
+            if (rb.velocity.y < 0)
             {
                 animator.SetBool("isJumping", false);
                 animator.SetBool("isFalling", true);
             }
 
-            if (IsGrounded())
+            if (isGrounded)
             {
                 animator.SetBool("isJumping", false);
                 animator.SetBool("isFalling", false);
                 remainingJumps = maxJumps;
             }
 
-            animator.SetBool("isRunning", horizontal != 0.0f);//Parar o ejecutar animacion de correr
+            animator.SetBool("isRunning", horizontal != 0.0f); //Parar o ejecutar animacion de correr
 
-            if (Input.GetButtonDown("Jump") && IsGrounded())//Si aprieto saltar y tengo saltos restantes
+            if (Input.GetButtonDown("Jump") && isGrounded) //Si aprieto saltar y tengo saltos restantes
             {
                 Jump();
             }
-            if (Input.GetButtonDown("Jump") && !IsGrounded() && remainingJumps > 0)
+
+            if (Input.GetButtonDown("Jump") && !isGrounded && remainingJumps > 0)
             {
                 DoubleJump();
             }
 
-            //---------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------//
+
+            //Dialogo        
+
             if (dialogueUI.IsOpen) return;
 
             if (Input.GetKeyDown(KeyCode.E) && dialogueUI.IsOpen == false)
             {
-                if(Interactable != null)
+                if (Interactable != null)
                 {
                     Interactable.Interact(this);
                 }
             }
-            //---------------------------------------------------------------------------------------------------------------//
+
         }
+
+//---------------------------------------------------------------------------------------------------------------//
 
         private void FixedUpdate()
         {
-            horizontal = Input.GetAxisRaw("Horizontal");//Entrada de usuario
+            horizontal = Input.GetAxisRaw("Horizontal");
             if(!block) Move(horizontal);
         }
         
-        private void OnDrawGizmosSelected()//Ver rango de ataque y escudo
+//---------------------------------------------------------------------------------------------------------------//
+
+        //Colisionadores
+
+        private void OnCollisionEnter2D(Collision2D other)
         {
-            if (attackPoint == null)
-
-                return;
-
-            Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-
-            if (blockPoint == null)
-
-                return;
-
-            Gizmos.DrawWireCube(blockPoint.position, new Vector3(blockRange, 2, 0));
+            
+            if(other.collider.CompareTag("Ground"))
+            {
+                isGrounded = true;
+            }
         }
-
+        
         private void OnCollisionStay2D(Collision2D other)
         {
-            /*if(other.collider.CompareTag("Ground"))
+            if(other.collider.CompareTag("Ground") && dead)
             {
                 rb.velocity = new Vector2(0, 0);
                 rb.isKinematic = true;
                 GetComponent<BoxCollider2D>().enabled = false;
-            }*/
+               
+            }
+        }
+
+        private void OnCollisionExit2D(Collision2D other)
+        {
+            isGrounded = false;
+        }
+
+        //---------------------------------------------------------------------------------------------------------------//
+
+        //Recibir daño y Morir
+    
+        public void TakeDamage(int damage)
+        {
+
+                currentHealth -= damage;
+                animator.SetTrigger("hurt");
+                healthBar.SetHealth(currentHealth);
+                if (currentHealth <= 0)
+                {
+                    Die();
+                }
         }
         
-        //Metodos propios
+        private void Die()
+        {
+            animator.SetBool("isDead", true);
+            dead = true;
+        }
+        
+//---------------------------------------------------------------------------------------------------------------//
+
+        //Atacar y defender
+    
+        private void Attack()//Ataca
+        {
+            animator.SetTrigger("attack");
+
+            //Hace daño a los enemigos en ese area
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position,attackRange,enemyLayers);
+
+            foreach(Collider2D enemy in hitEnemies)
+            {
+                Slime slime = enemy.GetComponent<Slime>();
+                Bullet bullet = enemy.GetComponent<Bullet>();
+                
+                if (slime != null)
+                {
+                    slime.TakeDamage(attackDamage, knockback, this.transform);
+                }
+                if (bullet != null)
+                {
+                    Destroy(bullet.gameObject);
+                }
+            }
+        }
         
         private void Block()
         {
@@ -194,47 +250,27 @@ public class Player : MonoBehaviour
             }
         }
         
-        public void TakeDamage(int damage)//Recibe daño
+        //Ver rango de ataque y escudo
+        
+        private void OnDrawGizmosSelected()
         {
-            currentHealth -= damage;
-            animator.SetTrigger("hurt");
-            healthBar.SetHealth(currentHealth);
-            if (currentHealth <= 0)
-            {
-                Die();
-            }
+            if (attackPoint == null)
+
+                return;
+
+            Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+
+            if (blockPoint == null)
+
+                return;
+
+            Gizmos.DrawWireCube(blockPoint.position, new Vector3(blockRange, 2, 0));
         }
         
-        private void Die()//Muere
-        {
+//---------------------------------------------------------------------------------------------------------------//
 
-            animator.SetBool("isDead", true);
-            Destroy(gameObject);
-            LevelManager.instance.Respawn();
-        }
-        
-        private void Attack()//Ataca
-        {
-            animator.SetTrigger("attack");
+        //Movimiento
 
-            //Hace daño a los enemigos en ese area
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position,attackRange,enemyLayers);
-
-            foreach(Collider2D enemy in hitEnemies)
-            {
-                Slime slime = enemy.GetComponent<Slime>();
-                Bullet bullet = enemy.GetComponent<Bullet>();
-                if (slime != null)
-                {
-                    slime.TakeDamage(attackDamage, knockback, this.transform);
-                }
-                if (bullet != null)
-                {
-                    Destroy(bullet.gameObject);
-                }
-            }
-        }
-        
         private void Jump()
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
@@ -252,11 +288,21 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
         
+//---------------------------------------------------------------------------------------------------------------//
+        
+        
+        
+        
+        
+        
+        
+        /*
         public bool IsGrounded()//Lanza una caja desde el centro del personaje y comprueba si esta chocando con los elementos en la capa "suelo"
         {
             RaycastHit2D raycastHit2D =  Physics2D.BoxCast(boxCollider2D.bounds.center, new Vector2(boxCollider2D.bounds.size.x, boxCollider2D.size.y), 0f, Vector2.down, 0.5f,groundLayer);
             return raycastHit2D.collider != null;
         }
+        */
         
         
         
