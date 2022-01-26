@@ -203,8 +203,7 @@ MonoBehaviour:
   attackPoint: {fileID: 1237934269817261298}
   blockPoint: {fileID: 1237934268756004158}
   feet: {fileID: 6602293722166693539}
-  healthBar: {fileID: 0}
-  canvas: {fileID: 0}
+  healthBar: {fileID: 1801252591495074843, guid: d3efd340077b3204fa814f187056ac19, type: 3}
   boxCollider2D: {fileID: 1237934269119426992}
   enemyLayers:
     serializedVersion: 2

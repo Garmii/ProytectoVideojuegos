@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     public Transform feet;
     
     public HealthBar healthBar;
-    public Canvas canvas;
 
     public BoxCollider2D boxCollider2D;
 

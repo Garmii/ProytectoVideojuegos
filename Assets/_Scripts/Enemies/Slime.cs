@@ -41,7 +41,7 @@ public class Slime : MonoBehaviour
         boxCollider2D = GetComponent<BoxCollider2D>();
         spawnedPlayer = FindObjectOfType<Player>().gameObject;
         currentHealth = maxHealth;
-       // healthBar.SetMaxHealth(currentHealth);
+        healthBar.SetMaxHealth(currentHealth);
         
         moving = true;
     }
@@ -136,7 +136,7 @@ public class Slime : MonoBehaviour
         if (!dead)
         {
             currentHealth -= damage;
-           // healthBar.SetHealth(currentHealth);
+            healthBar.SetHealth(currentHealth);
             animator.SetTrigger("hurt");
             if (currentHealth <= 0)
             {
@@ -158,7 +158,7 @@ public class Slime : MonoBehaviour
     public void Die()
     {
         animator.SetBool("isDead", true);
-        //canvas.enabled = false;
+        canvas.enabled = false;
         this.enabled = false;
         //Destroy(gameObject);
 
