@@ -4,6 +4,8 @@ public class GameManager : MonoBehaviour
 {
     private bool gameHasEnded = false;
     public float restartDelay = 3f;
+
+    public GameOverScreen gameOverScreen;
     void Update()
     {
 
@@ -15,12 +17,7 @@ public class GameManager : MonoBehaviour
         {
             gameHasEnded = true;
             Debug.Log("Game Over");
-            Invoke("Restart",restartDelay);
+           gameOverScreen.Setup(FindObjectOfType<ScoreManager>().score);
         }
-    }
-
-    void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
