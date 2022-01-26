@@ -37,8 +37,6 @@ public class Player : MonoBehaviour
     public DialogueUI DialogueUI => dialogueUI;
     public IInteractable Interactable { get; set; }
 
-   
-
     private float horizontal;
     private bool block;
     private float nextAttackTime = 0f;
@@ -153,7 +151,7 @@ public class Player : MonoBehaviour
 
         if (rb.position.y < -30)
         {
-            Debug.Log("Estoy muerto");
+           Die();
         }
 
     }
@@ -284,6 +282,7 @@ public class Player : MonoBehaviour
     {
         animator.SetBool("isDead", true);
         dead = true;
+        FindObjectOfType<GameManager>().GameOver();
     }
 
 //---------------------------------------------------------------------------------------------------------------//      

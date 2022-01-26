@@ -222,7 +222,8 @@ MonoBehaviour:
   jumpForce: 13
   maxJumps: 1
   remainingJumps: 0
-  dialogueUI: {fileID: 0}
+  dialogueUI: {fileID: 7425352720766909368, guid: 3cfcfef16f8fd814e8482afe23c0e773, type: 3}
+  gameManager: {fileID: 0}
 --- !u!1 &1237934269817261297
 GameObject:
   m_ObjectHideFlags: 0
