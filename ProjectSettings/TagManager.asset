@@ -37,7 +37,7 @@ TagManager:
   - Stamine
   - Coins
   - CameraBounds
-  - 
+  - Menu
   - 
   - 
   - 
@@ -81,4 +81,7 @@ TagManager:
     locked: 0
   - name: Coins
     uniqueID: 989790235
+    locked: 0
+  - name: Menu
+    uniqueID: 32096341
     locked: 0
