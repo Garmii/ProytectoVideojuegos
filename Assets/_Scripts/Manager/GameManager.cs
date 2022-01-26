@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private bool gameHasEnded = false;
-    public float restartDelay = 3f;
+   
 
     public GameOverScreen gameOverScreen;
     void Update()

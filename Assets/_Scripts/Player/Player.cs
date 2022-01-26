@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     private bool block;
     private float nextAttackTime = 0f;
     private bool dead = false;
+    private float restartDelay = 3f;
 
 
     private void Start()
@@ -282,6 +283,11 @@ public class Player : MonoBehaviour
     {
         animator.SetBool("isDead", true);
         dead = true;
+        Invoke("GameOver",restartDelay);
+    }
+
+    private void GameOver()
+    {
         FindObjectOfType<GameManager>().GameOver();
     }
 
