@@ -264,7 +264,7 @@ public class Player : MonoBehaviour
 
 //---------------------------------------------------------------------------------------------------------------//
 
-    //Recibir daño y Morir
+    //Recibir daño,curarse y Morir
 
     public void TakeDamage(int damage)
     {
@@ -276,6 +276,16 @@ public class Player : MonoBehaviour
             {
                 Die();
             }
+        }
+    }
+
+    public void RestoreHealth(int restoreValue)
+    {
+        currentHealth += restoreValue;
+        healthBar.SetHealth(currentHealth);
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
         }
     }
 
