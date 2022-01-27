@@ -57,7 +57,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time >= nextAttackTime) //Tiempo de enfriamiento para volver a atacar
+        
+        //Tiempo de enfriamiento para volver a atacar
+        
+        if (Time.time >= nextAttackTime) 
         {
             if (Input.GetButtonDown("Fire1"))
             {
@@ -332,7 +335,7 @@ public class Player : MonoBehaviour
 
     public bool IsGrounded()
     {
-        Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.5f, groundLayer);
+        Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.2f, groundLayer);
 
         if (groundCheck != null)
         {
