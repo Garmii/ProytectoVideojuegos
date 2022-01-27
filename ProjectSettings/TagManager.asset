@@ -12,6 +12,7 @@ TagManager:
   - Bullet
   - Water
   - Sign
+  - Heart
   layers:
   - Default
   - TransparentFX
@@ -38,7 +39,7 @@ TagManager:
   - Coins
   - CameraBounds
   - Menu
-  - 
+  - Heart
   - 
   - 
   - 
@@ -81,6 +82,9 @@ TagManager:
     locked: 0
   - name: Coins
     uniqueID: 989790235
+    locked: 0
+  - name: Heart
+    uniqueID: 4249392909
     locked: 0
   - name: Menu
     uniqueID: 32096341
