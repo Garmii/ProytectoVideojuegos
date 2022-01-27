@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: Text
   m_EditorClassIdentifier: Assembly-CSharp::DialogObject
   dialogue:
-  - "Holaaaaaa, se te ve un poco desorientada...\nParece que eres nueva por aqui.\nYo
-    te guiar\xE9, no te preocupes!."
-  - "Te explicar\xE9 lo b\xE1sico para que puesdas sobrevivir por aqu\xED."
+  - "Holaaaaaaaa, esto es un nivel tutorial.\nTe vamos a ense\xF1ar las reglas del
+    juego."
+  - Para moverte puedes pulsar a,w,s,d o las flechas
+  - 'Para saltar pulsa el espacio.
+
+    Ademassssss,
+
+    puedes realizar dobles
+    saltos.'
