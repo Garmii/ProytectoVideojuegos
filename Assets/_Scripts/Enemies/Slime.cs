@@ -31,6 +31,8 @@ public class Slime : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     private BoxCollider2D boxCollider2D;
 
+    public GameObject blood;
+
 
     
     
@@ -138,6 +140,7 @@ public class Slime : MonoBehaviour
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
             animator.SetTrigger("hurt");
+            Instantiate(blood,transform.position + new Vector3(0,0.5f,0), Quaternion.identity);
             if (currentHealth <= 0)
             {
                 Die();

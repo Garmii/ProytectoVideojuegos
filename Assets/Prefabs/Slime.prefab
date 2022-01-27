@@ -183,6 +183,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  blood: {fileID: 730793865656355014, guid: d2206075baefb0347ba5e837c36f104c, type: 3}
 --- !u!1001 &8252723121290604420
 PrefabInstance:
   m_ObjectHideFlags: 0

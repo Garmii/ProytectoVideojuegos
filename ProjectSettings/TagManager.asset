@@ -68,11 +68,14 @@ TagManager:
   - name: Character
     uniqueID: 3415557951
     locked: 0
+  - name: Heart
+    uniqueID: 4249392909
+    locked: 0
   - name: Particles
     uniqueID: 1320390277
     locked: 0
-  - name: Dialogue
-    uniqueID: 1393861543
+  - name: Coins
+    uniqueID: 989790235
     locked: 0
   - name: Health
     uniqueID: 2340700691
@@ -80,11 +83,8 @@ TagManager:
   - name: Stamine
     uniqueID: 3282022029
     locked: 0
-  - name: Coins
-    uniqueID: 989790235
-    locked: 0
-  - name: Heart
-    uniqueID: 4249392909
+  - name: Dialogue
+    uniqueID: 1393861543
     locked: 0
   - name: Menu
     uniqueID: 32096341
