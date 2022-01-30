@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
    
 
     public GameOverScreen gameOverScreen;
+    public GameObject levelCompleteUI;
+    
     void Update()
     {
 
@@ -19,5 +21,12 @@ public class GameManager : MonoBehaviour
             Debug.Log("Game Over");
            gameOverScreen.Setup(FindObjectOfType<ScoreManager>().score);
         }
+    }
+
+    public void CompleteLevel()
+    {
+        Time.timeScale = 0f;
+        levelCompleteUI.SetActive(true);
+        Debug.Log("Level complete!");
     }
 }

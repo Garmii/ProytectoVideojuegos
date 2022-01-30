@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -180,5 +181,4 @@ public class Slime : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
         }
     }
-    
 }
