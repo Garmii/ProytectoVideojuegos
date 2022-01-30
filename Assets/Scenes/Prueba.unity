@@ -1105,7 +1105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304528408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.51, y: -1.77, z: 0}
+  m_LocalPosition: {x: 87.52, y: -1.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2067406227}
@@ -1575,6 +1575,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4454425964335188733, guid: d4ffd89bfcfda1940a9e71997d7bdb40, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4454425964335188733, guid: d4ffd89bfcfda1940a9e71997d7bdb40, type: 3}
       propertyPath: m_Name
       value: Cannon (1)
       objectReference: {fileID: 0}
@@ -1741,7 +1745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5559120620566545195, guid: 13ef45000a20a6041aec28fc92c70d47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 72.658936
+      value: 72.57
       objectReference: {fileID: 0}
     - target: {fileID: 5559120620566545195, guid: 13ef45000a20a6041aec28fc92c70d47, type: 3}
       propertyPath: m_LocalPosition.y
