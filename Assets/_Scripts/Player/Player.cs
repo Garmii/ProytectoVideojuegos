@@ -269,7 +269,7 @@ public class Player : MonoBehaviour
 
     //Recibir daño,curarse y Morir
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage,int knock,int direction)
     {
         if(!dead){
             currentHealth -= damage;
@@ -279,7 +279,13 @@ public class Player : MonoBehaviour
             {
                 Die();
             }
+            Knock(direction,knock);
         }
+    }
+    
+    public void Knock(int direction,float knockback)
+    {
+        rb.AddForce(new Vector2(knockback * direction, 0.1f), ForceMode2D.Force);
     }
 
     public void RestoreHealth(int restoreValue)

@@ -172,7 +172,7 @@ public class Slime : MonoBehaviour
     {
         if (other.collider.tag == "Player")
         {
-            spawnedPlayer.GetComponent<Player>().TakeDamage(attackDamage);
+            spawnedPlayer.GetComponent<Player>().TakeDamage(attackDamage,knockback,direction);
         }
         if (other.collider.CompareTag("Ground") && dead)
         {

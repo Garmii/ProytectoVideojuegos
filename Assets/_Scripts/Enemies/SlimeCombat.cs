@@ -67,7 +67,7 @@ public class SlimeCombat : MonoBehaviour
     {
         if (other.collider.tag == "Player")
         {
-            playerCombat.TakeDamage(attackDamage);
+            playerCombat.TakeDamage(attackDamage,0,0);
         }
         if (other.collider.CompareTag("Ground") && dead)
         {
