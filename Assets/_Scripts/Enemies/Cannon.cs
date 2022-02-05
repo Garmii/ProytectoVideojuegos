@@ -40,6 +40,7 @@ public class Cannon : MonoBehaviour
 
     private void Shoot()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Cannon");
         Instantiate(Bullet, firePoint.position, Quaternion.identity);
     }
 

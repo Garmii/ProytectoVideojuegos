@@ -92,3 +92,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Level Complete
+    clip: {fileID: 8300000, guid: 8765fa18691d01f4faa72cdce7be259b, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Block
+    clip: {fileID: 8300000, guid: ebbf7cf9b3b70104fa14ebceebc008c7, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

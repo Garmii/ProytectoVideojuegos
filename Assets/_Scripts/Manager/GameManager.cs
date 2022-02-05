@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     public void CompleteLevel()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Level Complete");
         Time.timeScale = 0f;
         levelCompleteUI.SetActive(true);
         Debug.Log("Level complete!");

@@ -203,7 +203,7 @@ public class Player : MonoBehaviour
         block = true;
 
         Collider2D[] hitEnemies =
-            Physics2D.OverlapBoxAll(blockPoint.position, new Vector2(blockRange, 2), 0, enemyLayers);
+            Physics2D.OverlapCircleAll(blockPoint.position, blockRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -215,12 +215,16 @@ public class Player : MonoBehaviour
 
             if (slime != null)
             {
-                slime.Knock(direction, 2);
+                slime.Knock(direction, knockback);
             }
 
             if (bullet != null)
             {
                 Destroy(bullet.gameObject);
+            }
+            if(enemy != null)
+            {
+                FindObjectOfType<AudioManager>().PlaySound("Block");
             }
         }
     }
@@ -239,7 +243,7 @@ public class Player : MonoBehaviour
 
             return;
 
-        Gizmos.DrawWireCube(blockPoint.position, new Vector3(blockRange, 2, 0));
+        Gizmos.DrawWireSphere(blockPoint.position, blockRange);
     }
 
 //---------------------------------------------------------------------------------------------------------------//
@@ -370,14 +374,3 @@ public class Player : MonoBehaviour
     //---------------------------------------------------------------------------------------------------------------//    
 
 }
-        
-        
-        
-        
-        /*
-        public bool IsGrounded()//Lanza una caja desde el centro del personaje y comprueba si esta chocando con los elementos en la capa "suelo"
-        {
-            RaycastHit2D raycastHit2D =  Physics2D.BoxCast(boxCollider2D.bounds.center, new Vector2(boxCollider2D.bounds.size.x, boxCollider2D.size.y), 0f, Vector2.down, 0.5f,groundLayer);
-            return raycastHit2D.collider != null;
-        }
-        */

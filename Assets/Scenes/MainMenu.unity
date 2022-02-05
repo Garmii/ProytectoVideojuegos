@@ -3665,6 +3665,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7945287889366247224, guid: ee7ffc41c8fc8514d90f7aefadd3164d, type: 3}
+      propertyPath: sounds.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945287889366247224, guid: ee7ffc41c8fc8514d90f7aefadd3164d, type: 3}
+      propertyPath: sounds.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 791cd07978b1e4044bbb32e859c66365, type: 3}
+    - target: {fileID: 7945287889366247224, guid: ee7ffc41c8fc8514d90f7aefadd3164d, type: 3}
+      propertyPath: sounds.Array.data[10].name
+      value: Slime Dead
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945287889366247224, guid: ee7ffc41c8fc8514d90f7aefadd3164d, type: 3}
+      propertyPath: sounds.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 666ca5043807c2c43b9625fe02a58ca6, type: 3}
+    - target: {fileID: 7945287889366247224, guid: ee7ffc41c8fc8514d90f7aefadd3164d, type: 3}
+      propertyPath: sounds.Array.data[11].name
+      value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945287889366247224, guid: ee7ffc41c8fc8514d90f7aefadd3164d, type: 3}
+      propertyPath: sounds.Array.data[10].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945287889366247224, guid: ee7ffc41c8fc8514d90f7aefadd3164d, type: 3}
+      propertyPath: sounds.Array.data[11].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945287889366247224, guid: ee7ffc41c8fc8514d90f7aefadd3164d, type: 3}
+      propertyPath: sounds.Array.data[10].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945287889366247224, guid: ee7ffc41c8fc8514d90f7aefadd3164d, type: 3}
+      propertyPath: sounds.Array.data[11].volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7945287889366247225, guid: ee7ffc41c8fc8514d90f7aefadd3164d, type: 3}
       propertyPath: m_Name
       value: AudioManager

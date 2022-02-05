@@ -29,12 +29,14 @@ public class MainMenu : MonoBehaviour
     
     public void Credits()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Button");
         SceneManager.LoadScene("Credits");
         Debug.Log("Volver al menu");
     }
 
     public void Menu()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Button");
         SceneManager.LoadScene("MainMenu");
         Debug.Log("Volver al menu");
     }

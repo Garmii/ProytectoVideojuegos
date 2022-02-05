@@ -138,6 +138,7 @@ public class Slime : MonoBehaviour
     {
         if (!dead)
         {
+            FindObjectOfType<AudioManager>().PlaySound("Hurt");
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
             animator.SetTrigger("hurt");
@@ -161,6 +162,7 @@ public class Slime : MonoBehaviour
 
     public void Die()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Slime Dead");
         animator.SetBool("isDead", true);
         canvas.enabled = false;
         this.enabled = false;
