@@ -45,7 +45,10 @@ public class AudioManager : MonoBehaviour
         {
          Debug.Log(s.name + "no encontrado");   
         }
+        else
+        {
             s.source.Play();
+        }
     }
     
     public void StopSound(string name)

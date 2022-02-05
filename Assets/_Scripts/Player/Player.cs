@@ -41,7 +41,6 @@ public class Player : MonoBehaviour
     private bool block;
     private float nextAttackTime = 0f;
     private bool dead = false;
-    private float restartDelay = 3f;
 
 
     private void Start()
@@ -153,9 +152,9 @@ public class Player : MonoBehaviour
         
         //Muerte al caer
 
-        if (rb.position.y < -30)
+        if (rb.position.y < -30 && !dead)
         {
-           Die();
+           Die(0f);
         }
 
     }
@@ -274,20 +273,31 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage,int knock,int direction)
     {
         if(!dead){
+            FindObjectOfType<AudioManager>().PlaySound("Hurt");
             currentHealth -= damage;
             animator.SetTrigger("hurt");
             healthBar.SetHealth(currentHealth);
             if (currentHealth <= 0)
             {
-                Die();
+                Die(3f);
             }
-            Knock(direction,knock);
+            StartCoroutine(Knock(direction, knock));
         }
     }
     
-    public void Knock(int direction,float knockback)
+    public IEnumerator Knock(int direction,float knockback)
     {
-        rb.AddForce(new Vector2(knockback * direction, 0.1f), ForceMode2D.Force) ;
+
+        float timer = 0;
+
+        while (0.02f > timer)
+        {
+            timer += Time.deltaTime;
+            rb.AddForce(new Vector2(knockback * direction, 1 * knockback/5)) ;
+        }
+
+        yield return 0;
+        
     }
 
     public void RestoreHealth(int restoreValue)
@@ -300,8 +310,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Die()
+    private void Die(float restartDelay)
     {
+        FindObjectOfType<AudioManager>().PlaySound("Die");
         animator.SetBool("isDead", true);
         dead = true;
         Invoke("GameOver",restartDelay);

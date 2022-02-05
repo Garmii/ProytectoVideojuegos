@@ -1781,13 +1781,19 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Hurt
     clip: {fileID: 8300000, guid: d2cf54d45fca2ef418ead87f31b44e20, type: 3}
-    volume: 0.4
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: 10fe5964b3cc2184c82260edd83be0fa, type: 3}
     volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Die
+    clip: {fileID: 8300000, guid: ea362f7fb4536bf41a5fb2ed008928ca, type: 3}
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
