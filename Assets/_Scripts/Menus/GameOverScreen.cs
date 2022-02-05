@@ -18,18 +18,21 @@ public class GameOverScreen : MonoBehaviour
 
     public void Restart()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Button");
         gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void LoadMenu()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Button");
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Button");
         Debug.Log("Salir del juego! >:( ");
         Application.Quit();
     }

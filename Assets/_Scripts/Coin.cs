@@ -10,6 +10,7 @@ public class Coin : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().PlaySound("Coin");
             ScoreManager.instance.ChangeScore(coinValue);
             Destroy(this.gameObject);
         }

@@ -33,10 +33,28 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        PlaySound("Main Theme");
+    }
+
     public void PlaySound(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s==null) return;
+        if (s == null)
+        {
+         Debug.Log(s.name + "no encontrado");   
+        }
             s.source.Play();
+    }
+    
+    public void StopSound(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.Log(s.name + "no encontrado");   
+        }
+        s.source.Stop();
     }
 }

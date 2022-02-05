@@ -1752,13 +1752,43 @@ MonoBehaviour:
   - name: Main Theme
     clip: {fileID: 8300000, guid: 277be00253a353c4380e124cd63f8306, type: 3}
     volume: 0.2
-    pitch: 0
+    pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: ButtonPressed
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Forest Theme
+    clip: {fileID: 8300000, guid: 6468397ceefa41c458612088779ad04c, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Coin
+    clip: {fileID: 8300000, guid: e78879ecbf896d740b4cb17c38e11e21, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Button
+    clip: {fileID: 8300000, guid: 20226b54e094d1148af05e7ae9aec2eb, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Health
+    clip: {fileID: 8300000, guid: ae1b25968695a344caa223d94bf6e57e, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Hurt
+    clip: {fileID: 8300000, guid: d2cf54d45fca2ef418ead87f31b44e20, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: 10fe5964b3cc2184c82260edd83be0fa, type: 3}
+    volume: 0.4
+    pitch: 1
     loop: 0
     source: {fileID: 0}
 --- !u!4 &840319478

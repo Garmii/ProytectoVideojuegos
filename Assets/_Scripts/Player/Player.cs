@@ -249,11 +249,13 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Jump");
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
     private void DoubleJump()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Jump");
         rb.velocity = new Vector2(transform.position.x, 0);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         remainingJumps--;
@@ -285,7 +287,7 @@ public class Player : MonoBehaviour
     
     public void Knock(int direction,float knockback)
     {
-        rb.AddForce(new Vector2(knockback * direction, 0.1f), ForceMode2D.Force);
+        rb.AddForce(new Vector2(knockback * direction, 0.1f), ForceMode2D.Force) ;
     }
 
     public void RestoreHealth(int restoreValue)

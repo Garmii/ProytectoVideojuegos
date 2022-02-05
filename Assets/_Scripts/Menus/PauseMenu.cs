@@ -28,13 +28,15 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Button");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
     }
 
     void Pause()
-    {
+    { 
+        FindObjectOfType<AudioManager>().PlaySound("Button");
        pauseMenuUI.SetActive(true);
        Time.timeScale = 0f;
        gameIsPaused = true;
@@ -42,12 +44,14 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Button");
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Button");
         Debug.Log("Salir del juego! >:( ");
         Application.Quit();
     }

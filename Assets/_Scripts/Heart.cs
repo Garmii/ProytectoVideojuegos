@@ -11,6 +11,7 @@ public class Heart : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().PlaySound("Health");
             FindObjectOfType<Player>().RestoreHealth(health);
             Destroy(this.gameObject);
         }
