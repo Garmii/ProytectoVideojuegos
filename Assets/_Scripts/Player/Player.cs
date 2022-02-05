@@ -292,8 +292,9 @@ public class Player : MonoBehaviour
 
         while (0.02f > timer)
         {
+            Debug.Log(direction);
             timer += Time.deltaTime;
-            rb.AddForce(new Vector2(knockback * direction, 1 * knockback/5)) ;
+            rb.AddForce(new Vector2(knockback * direction, .1f));
         }
 
         yield return 0;
