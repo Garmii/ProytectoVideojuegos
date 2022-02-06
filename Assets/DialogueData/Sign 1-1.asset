@@ -10,7 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1079f308bdf9fb74c8dfa40de03eec1d, type: 3}
-  m_Name: Sign 2
+  m_Name: Sign 1-1
   m_EditorClassIdentifier: 
   dialogue:
-  - "Genial, estas viva!\nSab\xEDa que podias.............\nSigue avanzando."
+  - 'Holaaaaaaaaaa!!
+
+'
+  - "He hechado un ojo \nmas adelante\n"
+  - 'A veces hay que bajar para subir
+
+'
+  - Buena suerte!!!!

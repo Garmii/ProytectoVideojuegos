@@ -56,6 +56,9 @@ TagManager:
   - name: Water
     uniqueID: 1015452973
     locked: 0
+  - name: Cave
+    uniqueID: 1552769511
+    locked: 0
   - name: TIles
     uniqueID: 3046753989
     locked: 0

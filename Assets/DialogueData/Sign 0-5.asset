@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1079f308bdf9fb74c8dfa40de03eec1d, type: 3}
+  m_Name: Sign 0-5
+  m_EditorClassIdentifier: 
+  dialogue:
+  - 'Tienes buenas rodillas eh
+
+'
+  - "\xBFVes el coraz\xF3n?"
+  - Si lo coges recuperaras vida.
+  - "Si quieres seguir avanzando \nve con cuidado."
+  - 'Llevo un rato escuchando
+
+    como explosiones'
+  - Hmmmmm............

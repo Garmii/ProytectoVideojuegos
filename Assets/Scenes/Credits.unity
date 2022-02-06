@@ -1175,8 +1175,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Miguel Garc\xEDa Garc\xEDa\n\n\nEssam\n\n\nRgsDev\n\n\nVnitti\n\n\nMiguel
-    Garc\xEDa Garc\xEDa\n\n\nRoberto Mocci\n\n\n\n\n"
+  m_text: "por jugar!\n\n\n\n\n\n\n\nMiguel Garc\xEDa Garc\xEDa\n\n\nEssam\n\n\nRgsDev\n\n\nPyroxDev\n\n\nVnitti\n\n\nMiguel
+    Garc\xEDa Garc\xEDa\n\n\nEric Matyas\n\n\nRoberto Mocci\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cde21ce50cfce9f43a8228999ddbd2a6, type: 2}
   m_sharedMaterial: {fileID: 909738452329801099, guid: cde21ce50cfce9f43a8228999ddbd2a6, type: 2}
@@ -1239,7 +1239,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -342.84537, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1310,8 +1310,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Game Designer\n\n\nWorld Sprites\n\n\nKnight Sprites\n\n\nBackground\n\n\nSound
-    Effects\n\n\nFonts \n\n\n\n\n"
+  m_text: "Gracias\n\n\n\n\n\n\n\nGame Designer\n\n\nWorld Sprites\n\n\nKnight Sprites\n\n\nSlimes\n\n\nBackground\n\n\nSound
+    Effects\n\n\nMusic\n\n\nFonts \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cde21ce50cfce9f43a8228999ddbd2a6, type: 2}
   m_sharedMaterial: {fileID: 909738452329801099, guid: cde21ce50cfce9f43a8228999ddbd2a6, type: 2}
@@ -1374,7 +1374,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -345.45483, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2177,6 +2177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1792950355}
+  - component: {fileID: 1792950356}
   m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
@@ -2206,6 +2207,25 @@ Transform:
   m_Father: {fileID: 785712452}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1792950356
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792950354}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9e30647b3487231468014867dda2e53d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1855465806
 GameObject:
   m_ObjectHideFlags: 0

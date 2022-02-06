@@ -10,16 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1079f308bdf9fb74c8dfa40de03eec1d, type: 3}
-  m_Name: Sign 5
+  m_Name: Sign 0-4
   m_EditorClassIdentifier: 
   dialogue:
-  - 'Tienes buenas rodillas eh
+  - "WOWOWOWOWO!!!!!\nHas derrotado a \nlos Slimes sin problema"
+  - 'Eres muy fuerte.
 
 '
-  - "\xBFVes el coraz\xF3n?"
-  - Si lo coges recuperaras vida.
-  - "Si quieres seguir avanzando \nve con cuidado."
-  - 'Llevo un rato escuchando
-
-    como explosiones'
-  - Hmmmmm............
+  - "Creo que si saltas \npodras seguir avanzando"

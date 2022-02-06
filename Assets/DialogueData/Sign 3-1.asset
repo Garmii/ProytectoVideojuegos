@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1079f308bdf9fb74c8dfa40de03eec1d, type: 3}
-  m_Name: Sign 4
+  m_Name: Sign 3-1
   m_EditorClassIdentifier: 
   dialogue:
-  - "WOWOWOWOWO!!!!!\nHas derrotado a \nlos Slimes sin problema"
-  - 'Eres muy fuerte.
-
-'
-  - "Creo que si saltas \npodras seguir avanzando"
+  - Solo te digo
+  - Buena suerte
+  - ................................................

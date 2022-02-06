@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1079f308bdf9fb74c8dfa40de03eec1d, type: 3}
+  m_Name: Sign 0-6
+  m_EditorClassIdentifier: 
+  dialogue:
+  - '...
+
+    ...
+
+    ...
+
+    ...'
+  - 'Que tecnica!
+
+'
+  - Estoy impresionado
+  - 'Veo que has recogido
+
+    algo de dinero de camino'
+  - Bueno bueno bueno.
+  - "Si avanzas ver\xE1s un brillo"
+  - "Tocalo para \nir al siguente nivel!"

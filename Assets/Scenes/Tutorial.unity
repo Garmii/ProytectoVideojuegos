@@ -601,6 +601,7 @@ GameObject:
   - component: {fileID: 144544424}
   - component: {fileID: 144544426}
   - component: {fileID: 144544425}
+  - component: {fileID: 144544428}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -701,13 +702,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144544423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5339622, y: -1.4999847, z: -10}
+  m_LocalPosition: {x: 2.5339622, y: -1.8099842, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 511900959}
   m_Father: {fileID: 1938653741}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &144544428
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144544423}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &159303112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +2891,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850442986}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.72, y: -3.98, z: 0}
+  m_LocalPosition: {x: -23.19, y: -3.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407834206}
@@ -4902,16 +4922,6 @@ Tilemap:
   m_GameObject: {fileID: 1225414412}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: -6, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 23
-      m_TileSpriteIndex: 23
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 4
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -3, y: -3, z: 0}
     second:
       serializedVersion: 2
@@ -5160,7 +5170,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 606990b57d5a56b4d8f7964e03666afb, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 71c267483f9b4964387e9d76f601f2e7, type: 2}
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 48dfd95f12cfc374686046ca976a1e9a, type: 2}
   - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 7f98c0f29a697b942a9b3e410b54cbe6, type: 2}
@@ -5211,12 +5221,12 @@ Tilemap:
     m_Data: {fileID: -5476419963381330631, guid: 9ee09052852f33148913e98977b304ef, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: -7143626506686321329, guid: 9ee09052852f33148913e98977b304ef, type: 3}
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {fileID: -3327071671685733604, guid: 9ee09052852f33148913e98977b304ef, type: 3}
   - m_RefCount: 7
     m_Data: {fileID: 7146710957975650767, guid: 9ee09052852f33148913e98977b304ef, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 21
+  - m_RefCount: 20
     m_Data:
       e00: 1
       e01: 0
@@ -5243,7 +5253,7 @@ Tilemap:
     m_Data: {r: -3.698574e+19, g: -3.698574e+19, b: -3.698574e+19, a: -3.698574e+19}
   - m_RefCount: 0
     m_Data: {r: -3.698574e+19, g: -3.698574e+19, b: -3.698574e+19, a: -3.698574e+19}
-  - m_RefCount: 21
+  - m_RefCount: 20
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -5752,6 +5762,7 @@ GameObject:
   - component: {fileID: 1287531647}
   - component: {fileID: 1287531645}
   - component: {fileID: 1287531646}
+  - component: {fileID: 1287531648}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -5822,13 +5833,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287531644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.209999, y: -1.5, z: -10}
+  m_LocalPosition: {x: -4.299999, y: -1.8099995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1780371041}
   m_Father: {fileID: 1938653741}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1287531648
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287531644}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1292816459
 GameObject:
   m_ObjectHideFlags: 0
@@ -7569,11 +7599,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1237934269119426995, guid: 454852aac0dd6c74c8200ab325a4348a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.21
+      value: -7.3
       objectReference: {fileID: 0}
     - target: {fileID: 1237934269119426995, guid: 454852aac0dd6c74c8200ab325a4348a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7
+      value: -3.01
       objectReference: {fileID: 0}
     - target: {fileID: 1237934269119426995, guid: 454852aac0dd6c74c8200ab325a4348a, type: 3}
       propertyPath: m_LocalPosition.z

@@ -10,23 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1079f308bdf9fb74c8dfa40de03eec1d, type: 3}
-  m_Name: Sign 6
+  m_Name: Sign 2-1
   m_EditorClassIdentifier: 
   dialogue:
-  - '...
+  - Hola de nuevo!
+  - Te dare un consejo...
+  - 'El mejor ataque es
 
-    ...
-
-    ...
-
-    ...'
-  - 'Que tecnica!
-
-'
-  - Estoy impresionado
-  - 'Veo que has recogido
-
-    algo de dinero de camino'
-  - Bueno bueno bueno.
-  - "Si avanzas ver\xE1s un brillo"
-  - "Tocalo para \nir al siguente nivel!"
+    una buena defensa'
+  - Nos vemossss!!!!!!!
