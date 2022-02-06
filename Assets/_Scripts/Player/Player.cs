@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
         
         if (Time.time >= nextAttackTime) 
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && !block)
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;

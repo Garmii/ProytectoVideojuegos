@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1079f308bdf9fb74c8dfa40de03eec1d, type: 3}
-  m_Name: Text
-  m_EditorClassIdentifier: Assembly-CSharp::DialogObject
+  m_Name: Sign 4
+  m_EditorClassIdentifier: 
   dialogue:
-  - "Holaaaaaaaa, esto es un nivel tutorial.\nTe vamos a ense\xF1ar las reglas del
-    juego."
-  - Para moverte puedes pulsar a,w,s,d o las flechas
-  - 'Para saltar pulsa el espacio.
+  - "WOWOWOWOWO!!!!!\nHas derrotado a \nlos Slimes sin problema"
+  - 'Eres muy fuerte.
 
-    Ademassssss,
-
-    puedes realizar dobles
-    saltos.'
+'
+  - "Creo que si saltas \npodras seguir avanzando"

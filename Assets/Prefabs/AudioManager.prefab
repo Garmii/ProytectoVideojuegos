@@ -104,3 +104,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Slime Dead
+    clip: {fileID: 8300000, guid: 791cd07978b1e4044bbb32e859c66365, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cannon
+    clip: {fileID: 8300000, guid: 666ca5043807c2c43b9625fe02a58ca6, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
