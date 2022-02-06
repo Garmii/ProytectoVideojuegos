@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
 
     public static AudioManager instance;
+    public Sound actualSound;
 
     private void Awake()
     {
@@ -48,6 +49,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             s.source.Play();
+            actualSound = s;
         }
     }
     
@@ -58,6 +60,9 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log(s.name + "no encontrado");   
         }
+        else
+        {
         s.source.Stop();
+        }
     }
 }

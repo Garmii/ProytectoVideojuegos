@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().PlaySound("Button");
         Debug.Log("Ajustes");
-        //SceneManager.LoadScene("Ajustes");
+        SceneManager.LoadScene("MenuOpciones");
     }
 
     public void Quit()
@@ -46,6 +46,24 @@ public class MainMenu : MonoBehaviour
         FindObjectOfType<AudioManager>().PlaySound("Button");
         SceneManager.LoadScene("Ayuda");
         Debug.Log("Ir a ayuda");
+    }
+
+    public void CambiarMusica()
+    {
+        FindObjectOfType<AudioManager>().PlaySound("Button");
+        if (FindObjectOfType<AudioManager>().actualSound.name == "Main Theme")
+        {
+            FindObjectOfType<AudioManager>().StopSound("Main Theme");
+            FindObjectOfType<AudioManager>().PlaySound("Forest Theme");
+        }
+        else
+        {
+        FindObjectOfType<AudioManager>().StopSound("Forest Theme");
+        FindObjectOfType<AudioManager>().PlaySound("Main Theme");
+        }
+        Debug.Log(FindObjectOfType<AudioManager>().actualSound.name);
+        
+        Debug.Log("Cambia musica");
     }
 
 }
