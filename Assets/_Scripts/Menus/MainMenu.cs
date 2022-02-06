@@ -40,5 +40,12 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         Debug.Log("Volver al menu");
     }
+    
+    public void Ayuda()
+    {
+        FindObjectOfType<AudioManager>().PlaySound("Button");
+        SceneManager.LoadScene("Ayuda");
+        Debug.Log("Ir a ayuda");
+    }
 
 }
